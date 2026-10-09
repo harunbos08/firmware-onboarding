@@ -1,8 +1,5 @@
 #include "BMEI2CInterface.h"
 
-BMEI2CInterface::BMEI2CInterface() {
-}
-
 bool BMEI2CInterface::begin()
 {
     return bme.begin(BMEConstants::I2C_ADDRESS);
