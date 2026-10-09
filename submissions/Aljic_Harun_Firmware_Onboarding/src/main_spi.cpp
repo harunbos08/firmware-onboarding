@@ -9,6 +9,9 @@ static uint32_t lastReadMs = 0;
 void setup()
 {
     Serial.begin(SERIAL_BAUD);
+
+    BMESPIInterfaceInstance::create();
+    LEDControllerInstance::create();
     LEDControllerInstance::instance().begin();
     
     if(!BMESPIInterfaceInstance::instance().begin())

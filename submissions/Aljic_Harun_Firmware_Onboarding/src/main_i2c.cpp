@@ -4,12 +4,14 @@
 #include "BMEConstants.h"
 
 using namespace BMEConstants;
-
 static uint32_t lastReadMs = 0;
 
 void setup()
 {
     Serial.begin(SERIAL_BAUD);
+
+    BMEI2CInterfaceInstance::create();
+    LEDControllerInstance::create();
     LEDControllerInstance::instance().begin();
     
     if(!BMEI2CInterfaceInstance::instance().begin())

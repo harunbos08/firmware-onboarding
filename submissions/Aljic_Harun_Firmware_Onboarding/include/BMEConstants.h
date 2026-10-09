@@ -2,7 +2,7 @@
 #include <Arduino.h>
 
 namespace BMEConstants {
-    const uint8_t I2C_ADDRESS = 0x77; // I2C address of the BME280 sensor
+    const uint8_t I2C_ADDRESS = 0x76; // I2C address of the BME280 sensor
     const uint8_t BME280_CHIP_ID = 0x60; // Chip ID for the BME280 sensor
     const uint8_t BME280_RESET_VALUE = 0xB6; // Reset value for the BME280 sensor
     const uint8_t BME280_CTRL_HUM = 0xF2; // Control register for humidity
@@ -19,8 +19,8 @@ namespace BMEConstants {
 
     const uint8_t SPI_CS_PIN = 10;
     const uint8_t LED_PIN = LED_BUILTIN;
-    const float TEMP_MIN_C = 20.0f;
-    const float TEMP_MAX_C = 35.0f;
+    const float TEMP_MIN_C = 26.0f;
+    const float TEMP_MAX_C = 29.0f;
     const uint32_t BLINK_SLOW_MS = 1000;
     const uint32_t BLINK_FAST_MS = 100;
     const uint32_t SENSOR_READ_INTERVAL_MS = 500;
